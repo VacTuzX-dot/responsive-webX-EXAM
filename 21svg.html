@@ -9,24 +9,21 @@
     <link
       rel="icon"
       type="image/x-icon"
-      href="https://cdn.discordapp.com/attachments/972107905086160906/1116972203414671380/avatars-000255063979-krjrfc-t500x500.jpg"
-    />
+      href="https://cdn.discordapp.com/attachments/972107905086160906/1116972203414671380/avatars-000255063979-krjrfc-t500x500.jpg" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+      referrerpolicy="no-referrer" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   </head>
   <style>
     .content-teams-item:nth-child(1) img {
-      max-width: 720px;
-      max-height: 432px;
+      max-width: 729px;
+      max-height: 546px;
     }
     .content-teams-item a {
       color: red;
@@ -43,6 +40,36 @@
       color: #900000;
       text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
     }
+
+    ::-webkit-scrollbar-thumb {
+      background: red;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #900000;
+    }
+    header {
+      border-top: 5px solid red;
+    }
+    .toggle-label {
+      outline: 3px solid red;
+    }
+    .toggle:checked + .toggle-label {
+      transition: 0.4s ease-out;
+      background-color: #900000;
+    }
+    .dark-mode .content-meet h1 {
+      color: red;
+      transition: 0.4s ease;
+    }
+    .dark-mode .content-teams-item h2 a {
+      color: #900000;
+      text-shadow: 0 2px 5px #700000;
+      transition: 0.35s ease;
+    }
+    .dark-mode .content-teams-item h2 a:hover {
+      color: rgb(255, 0, 0);
+      transition: 0.35s ease-in;
+    }
   </style>
   <body>
     <header>
@@ -52,6 +79,8 @@
         <div class="bar2"></div>
         <div class="bar3"></div>
       </div>
+      <!-- toggle-dakrl -->
+      <toggle-comp></toggle-comp>
       <!--  -->
       <nav>
         <div class="container">
@@ -90,12 +119,10 @@
           <div class="content-teams-grid">
             <!--  -->
             <div
-              class="content-teams-item animate__animated animate__bounceInRight"
-            >
+              class="content-teams-item animate__animated animate__bounceInRight">
               <img
                 src="https://www.shropshirestar.com/resizer/c_ej2Zo799N--6DJLPNlNNkj9Ac=/1200x0/filters:quality(100)/arc-anglerfish-arc2-prod-shropshirestar-mna.s3.amazonaws.com/public/D7DYQOC745C7VNNUF5QVN4IR7I.jpg"
-                loading="lazy"
-              />
+                loading="lazy" />
               <h2>
                 Shéyaa Bin Abraham-Joseph หรือ 21 Savage
                 เป็นนักร้องRapperและนักเขียนเนื้อเพลง ชาวอังกฤษ-อเมริกัน
@@ -109,8 +136,7 @@
               </h2>
             </div>
             <div
-              class="content-teams-item animate__animated animate__bounceInLeft"
-            >
+              class="content-teams-item animate__animated animate__bounceInLeft">
               <iframe
                 style="border-radius: 12px"
                 src="https://open.spotify.com/embed/track/6fwdbPMwP1zVStm8FybmkO?utm_source=generator"
@@ -119,8 +145,7 @@
                 frameborder="0"
                 allowfullscreen=""
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-              ></iframe>
+                loading="lazy"></iframe>
               <h2>
                 My Fave Song of
                 <a

@@ -9,25 +9,21 @@
     <link
       rel="icon"
       type="image/x-icon"
-      href="https://cdn.discordapp.com/attachments/972107905086160906/1116972203414671380/avatars-000255063979-krjrfc-t500x500.jpg"
-    />
+      href="https://cdn.discordapp.com/attachments/972107905086160906/1116972203414671380/avatars-000255063979-krjrfc-t500x500.jpg" />
 
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+      referrerpolicy="no-referrer" />
   </head>
   <style>
     .content-teams-item:nth-child(1) img {
-      max-width: 720px;
-      max-height: 432px;
+      max-width: 620px;
     }
     .content-teams-item a {
       color: rgb(0, 183, 255);
@@ -54,6 +50,35 @@
       color: blueviolet;
       transition: 0.4s ease;
     }
+    ::-webkit-scrollbar-thumb {
+      background: rgb(0, 183, 255);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgb(0, 140, 255);
+    }
+    header {
+      border-top: 5px solid rgb(0, 183, 255);
+    }
+    .toggle-label {
+      outline: 3px solid rgb(0, 183, 255);
+    }
+    .toggle:checked + .toggle-label {
+      transition: 0.4s ease-out;
+      background-color: rgb(0, 140, 255);
+    }
+    .dark-mode .content-meet h1 {
+      color: rgb(0, 255, 255);
+      transition: 0.4s ease;
+    }
+    .dark-mode .content-teams-item h2 a {
+      color: skyblue;
+      text-shadow: 0 2px 1px rgba(255, 255, 255, 0.4);
+      transition: 0.35s ease;
+    }
+    .dark-mode .content-teams-item h2 a:hover {
+      color: rgb(0, 255, 179);
+      transition: 0.35s ease-in;
+    }
   </style>
   <body>
     <header>
@@ -63,6 +88,8 @@
         <div class="bar2"></div>
         <div class="bar3"></div>
       </div>
+      <!-- toggle dark light -->
+      <toggle-comp></toggle-comp>
       <!--  -->
       <nav>
         <div class="container">
@@ -101,12 +128,10 @@
           <div class="content-teams-grid">
             <!--  -->
             <div
-              class="content-teams-item animate__animated animate__bounceInLeft"
-            >
+              class="content-teams-item animate__animated animate__bounceInLeft">
               <img
                 src="https://static.billboard.com/files/2020/11/The-Kid-Laroi-cr-Daniel-Prakopcyk-press-2020-billboard-1548-1606243880-compressed.jpg"
-                loading="lazy"
-              />
+                loading="lazy" />
               <h2>
                 Charlton Kenneth Jeffrey Howard หรือ The Kid Laroi
                 เป็นนักแต่งเพลง,ร้องเดี่ยว ,นักร้องRap สัญชาติ Australian
@@ -119,8 +144,7 @@
               </h2>
             </div>
             <div
-              class="content-teams-item animate__animated animate__bounceInRight"
-            >
+              class="content-teams-item animate__animated animate__bounceInRight">
               <iframe
                 style="border-radius: 12px"
                 src="https://open.spotify.com/embed/track/0zotwiNo16aaUg76C4Fgl5?utm_source=generator"
@@ -129,8 +153,7 @@
                 frameborder="0"
                 allowfullscreen=""
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-              ></iframe>
+                loading="lazy"></iframe>
               <h2>
                 My Fave Song of
                 <a

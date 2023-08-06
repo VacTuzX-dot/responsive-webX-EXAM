@@ -9,24 +9,20 @@
     <link
       rel="icon"
       type="image/x-icon"
-      href="https://cdn.discordapp.com/attachments/972107905086160906/1116972203414671380/avatars-000255063979-krjrfc-t500x500.jpg"
-    />
+      href="https://cdn.discordapp.com/attachments/972107905086160906/1116972203414671380/avatars-000255063979-krjrfc-t500x500.jpg" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+      referrerpolicy="no-referrer" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   </head>
   <style>
     .content-teams-item:nth-child(1) img {
-      max-width: 720px;
-      max-height: 432px;
+      max-width: 620px;
     }
     .content-teams-item a {
       color: blue;
@@ -43,6 +39,22 @@
       color: blue;
       text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     }
+    ::-webkit-scrollbar-thumb {
+      background: blue;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgb(53, 53, 255);
+    }
+    header {
+      border-top: 5px solid blue;
+    }
+    .toggle-label {
+      outline: 3px solid blue;
+    }
+    .toggle:checked + .toggle-label {
+      transition: 0.4s ease-out;
+      background-color: rgb(53, 53, 255);
+    }
   </style>
   <body>
     <header>
@@ -52,6 +64,8 @@
         <div class="bar2"></div>
         <div class="bar3"></div>
       </div>
+      <!-- toggles light dark -->
+      <toggle-comp></toggle-comp>
       <!--  -->
       <nav>
         <div class="container">
@@ -90,12 +104,10 @@
           <div class="content-teams-grid">
             <!--  -->
             <div
-              class="content-teams-item animate__animated animate__bounceInRight"
-            >
+              class="content-teams-item animate__animated animate__bounceInRight">
               <img
                 src="https://dynamicmedia.livenationinternational.com/Media/p/o/t/252ddec5-f33b-4205-b930-7a9ca7a69492.jpg"
-                loading="lazy"
-              />
+                loading="lazy" />
               <h2>
                 Jarad Anthony Higgins หรือ Juice WRLD เป็นนักแต่งเพลง
                 ,นักร้องRapperชาวอเมริกัน (ถึงแก่กรรมเมื่อวันที่ 8 ธันวาคม 2019)
@@ -108,7 +120,8 @@
                 เจ้าตัวถือว่าเพลงเป็นทางเลือกในการแสดงอารมณ์และการสื่อสารกับผู้ฟัง
               </h2>
             </div>
-            <div class="content-teams-item animate__animated animate__bounceInLeft">
+            <div
+              class="content-teams-item animate__animated animate__bounceInRight animate_faster">
               <iframe
                 style="border-radius: 12px"
                 src="https://open.spotify.com/embed/track/6bfJggd4HFdzHzvZLQ5EDX?utm_source=generator"
@@ -117,8 +130,7 @@
                 frameborder="0"
                 allowfullscreen=""
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-              ></iframe>
+                loading="lazy"></iframe>
               <h2>
                 My Fave Song of
                 <a
@@ -140,7 +152,7 @@
     <!-- content -->
     <footer>
       <div class="container">
-        <div class="footer-grid ">
+        <div class="footer-grid">
           <!--  -->
           <div class="footer-item">
             <h3>Taweesak Numma</h3>

@@ -9,21 +9,27 @@
     <link
       rel="icon"
       type="image/x-icon"
-      href="https://cdn.discordapp.com/attachments/972107905086160906/1116972203414671380/avatars-000255063979-krjrfc-t500x500.jpg"
-    />
+      href="https://cdn.discordapp.com/attachments/972107905086160906/1116972203414671380/avatars-000255063979-krjrfc-t500x500.jpg" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+      referrerpolicy="no-referrer" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   </head>
   <style>
+    ::-webkit-scrollbar-thumb {
+      background: violet;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgb(230, 157, 230);
+    }
+    header {
+      border-top: 5px solid violet;
+    }
     .content-teams-item:nth-child(1) img {
       max-width: 640px;
       max-height: 426.5px;
@@ -40,7 +46,7 @@
       text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
     }
     .content-meet h1 {
-      color: violet;
+      color: rgb(236, 82, 236);
       text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     }
     .content-teams-item:nth-child(1) a {
@@ -53,6 +59,13 @@
       color: orangered;
       transition: 0.5s ease;
     }
+    .toggle-label {
+      outline: 3px solid violet;
+    }
+    .toggle:checked + .toggle-label {
+      transition: 0.4s ease-out;
+      background-color: rgb(255, 198, 255);
+    }
   </style>
   <body>
     <header>
@@ -62,6 +75,8 @@
         <div class="bar2"></div>
         <div class="bar3"></div>
       </div>
+      <!-- toggle dark light -->
+      <toggle-comp></toggle-comp>
       <!--  -->
       <nav>
         <div class="container">
@@ -99,11 +114,11 @@
         <div class="content-tems">
           <div class="content-teams-grid">
             <!--  -->
-            <div class="content-teams-item animate__animated animate__bounceInRight">
+            <div
+              class="content-teams-item animate__animated animate__bounceInLeft">
               <img
                 src="https://www.fungjaizine.com/wp-content/uploads/2018/01/The-TOYS-03_Easy-Resize.com_.jpg"
-                loading="lazy"
-              />
+                loading="lazy" />
               <h2>
                 The Toys หรือ ธันวา บุญสูงเนิน เป็นนักร้อง นักดนตรี นักแต่งเพลง
                 โปรดิวเซอร์เพลงชาวไทย
@@ -115,11 +130,11 @@
                   >Whattheduck</a
                 >
                 และมีเพลงฮิตอย่าง หน้าหนาวที่แล้ว, ก่อนฤดูฝน, 04:00, Stars,
-                ลาลาลอย (100%) และ พูดไม่ออก <br /><br />เพลงของ XXXTENTACION
-                มักเกี่ยวข้องกับอารมณ์ ความรู้สึกของเจ้าตัวเอง
+                ลาลาลอย (100%) และ พูดไม่ออก
               </h2>
             </div>
-            <div class="content-teams-item animate__animated animate__bounceInLeft">
+            <div
+              class="content-teams-item animate__animated animate__bounceInRight animate_faster">
               <iframe
                 style="border-radius: 12px"
                 src="https://open.spotify.com/embed/track/2oi1IrCdFVb7f3C8eAWVXz?utm_source=generator"
@@ -128,8 +143,7 @@
                 frameborder="0"
                 allowfullscreen=""
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-              ></iframe>
+                loading="lazy"></iframe>
               <h2>
                 My Fave Song of
                 <a

@@ -9,19 +9,38 @@
     <link
       rel="icon"
       type="image/x-icon"
-      href="https://cdn.discordapp.com/attachments/972107905086160906/1116972203414671380/avatars-000255063979-krjrfc-t500x500.jpg"
-    />
+      href="https://cdn.discordapp.com/attachments/972107905086160906/1116972203414671380/avatars-000255063979-krjrfc-t500x500.jpg" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+      referrerpolicy="no-referrer" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+      .toggle-label {
+        outline: 3px solid #8e092b;
+      }
+      .toggle:checked + .toggle-label {
+        transition: 0.4s ease-out;
+        background-color: rgb(180, 0, 0);
+        outline: 3px solid rgb(255, 0, 0);
+      }
+      .dark-mode .content-meet h1 {
+        color: cyan;
+        transition: 0.4s ease;
+      }
+      .dark-mode .content-teams-item li a {
+        color: skyblue;
+        transition: 0.4s ease-out;
+      }
+      .dark-mode .content-teams-item li a:hover {
+        color: rgb(0, 255, 255);
+        transition: 0.4s ease-out;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -31,6 +50,8 @@
         <div class="bar2"></div>
         <div class="bar3"></div>
       </div>
+      <!-- toggle -->
+      <toggle-comp></toggle-comp>
       <!--  -->
       <nav>
         <div class="container">
@@ -70,8 +91,7 @@
             <div class="content-teams-item animate__animated animate__fadeInUp">
               <img
                 src="http://getdrawings.com/img/opera-singer-silhouette-12.png"
-                loading="lazy"
-              />
+                loading="lazy" />
               <h2>
                 ENG : A musician means a person who plays a musical instrument.
                 or people with musical talent Be it a composer, a conductor or a
@@ -92,13 +112,10 @@
                 </li>
               </h2>
             </div>
-            <div
-              class="content-teams-item animate__animated animate__fadeInUp "
-            >
+            <div class="content-teams-item animate__animated animate__fadeInUp">
               <img
                 src="https://cdn.discordapp.com/attachments/972107905086160906/1123130580368887870/IMG_4973.png"
-                loading="lazy"
-              />
+                loading="lazy" />
               <h2>Coding By Taweesak Numma _</h2>
             </div>
             <!--  -->

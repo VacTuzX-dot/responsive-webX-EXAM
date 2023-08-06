@@ -64,3 +64,118 @@ class logo extends HTMLElement {
   }
 }
 customElements.define("logo-component", logo);
+
+// toggle component
+class togglewrap extends HTMLElement {
+  constructor() {
+    super();
+  }
+  connectedCallback() {
+    this.innerHTML = `
+    <style>
+      .toggle-wrapper {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      display: inline-block;
+      vertical-align: middle;
+      z-index: 9999;
+     }
+      .toggle {
+      display: none;
+      }
+      .toggle-label {
+      display: block;
+      cursor: pointer;
+      width: 110px;
+      height: 30px;
+      background-color: #222;
+      border-radius: 20px;
+      position: relative;
+      transition: 0.4s ease;
+      transition: background-color 0.45s ease-in-out;
+      }
+      .toggle-label:before {
+      content: "";
+      position: absolute;
+      left: 3px;
+      top: 3px;
+      width: 24px;
+      height: 24px;
+      background-color: #fff;
+      border-radius: 50%;
+      transition: transform 0.4s ease-out;
+     }
+      .toggle:checked + .toggle-label:before {
+        transform: translateX(0px);
+      }
+      .toggle:checked + .toggle-label:before {
+        transform: translateX(80px);
+      }
+      .toggle-text {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        font-size: 17px;
+        color: white;
+        text-align: center;
+        line-height: 30px;
+        transition: opacity 0.2s ease-in-out;
+        opacity: 0.8;
+        transition: 0.4s ease-in-out;
+      }
+      .toggle:checked + .toggle-label .toggle-text {
+        font-weight: bold;
+        opacity: 1;
+        color: black;
+        transition: 0.4s ease-in-out;
+      }
+      .dark-mode .content {
+        background: #1f1f1f;
+        transition: background 0.4s ease-out;
+      }
+      .dark-mode .content-heading {
+        color: whitesmoke;
+        opacity: 0.85;
+        transition: 0.5s ease-out;
+      }
+      .dark-mode .content-teams-item h2 {
+        color: azure;
+        opacity: 0.7;
+        transition: 0.5s ease-out;
+      }
+      .dark-mode header {
+        background-color: rgb(43, 43, 43);
+      }
+      .light-mode .toggle {
+        display: inline-block;
+      }
+    </style>
+      <div class="toggle-wrapper">
+        <input type="checkbox" id="toggle" class="toggle" />
+        <label for="toggle" class="toggle-label">
+          <span class="toggle-text">Light</span>
+        </label>
+      </div>
+    `;
+  }
+}
+customElements.define("toggle-comp", togglewrap);
+
+// toggle dark ND light theme
+
+const toggleSwitch = document.querySelector(".toggle");
+const toggleText = document.querySelector(".toggle-text");
+const container = document.querySelector(".container");
+
+toggleSwitch.addEventListener("change", (e) => {
+  document.body.classList.toggle("dark-mode");
+  container.classList.toggle("dark-mode");
+  if (e.target.checked) {
+    toggleText.textContent = "Dark";
+  } else {
+    toggleText.textContent = "Light";
+  }
+});

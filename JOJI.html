@@ -9,24 +9,29 @@
     <link
       rel="icon"
       type="image/x-icon"
-      href="https://cdn.discordapp.com/attachments/972107905086160906/1116972203414671380/avatars-000255063979-krjrfc-t500x500.jpg"
-    />
+      href="https://cdn.discordapp.com/attachments/972107905086160906/1116972203414671380/avatars-000255063979-krjrfc-t500x500.jpg" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+      referrerpolicy="no-referrer" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   </head>
   <style>
+    ::-webkit-scrollbar-thumb {
+      background: red;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgb(213, 0, 0);
+    }
+    header {
+      border-top: 5px solid red;
+    }
     .content-teams-item:nth-child(1) img {
       max-width: 800px;
-      max-height: 630px;
     }
     .content-teams-item a {
       color: red;
@@ -42,6 +47,13 @@
       color: red;
       text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     }
+    .toggle-label {
+      outline: 3px solid red;
+    }
+    .toggle:checked + .toggle-label {
+      transition: 0.4s ease-out;
+      background-color: rgb(180, 0, 0);
+    }
   </style>
   <body>
     <header>
@@ -51,6 +63,8 @@
         <div class="bar2"></div>
         <div class="bar3"></div>
       </div>
+      <!-- toggles light dark -->
+      <toggle-comp></toggle-comp>
       <!--  -->
       <nav>
         <div class="container">
@@ -89,12 +103,10 @@
           <div class="content-teams-grid">
             <!--  -->
             <div
-              class="content-teams-item animate__animated animate__bounceInRight"
-            >
+              class="content-teams-item animate__animated animate__bounceInLeft">
               <img
                 src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg-www.tf-cdn.com%2Fartist%2F10%2Fjoji.jpeg%3F_v%3D20210414184104%26fit%3Dcrop%26crop%3Dfaces%2520entropy%26w%3D1200%26h%3D630&f=1&nofb=1&ipt=f0312ce9a6cf4ec30ea90bb1292af1dca12dfbd37a6351cf399c1e4fbcf30325&ipo=images"
-                loading="lazy"
-              />
+                loading="lazy" />
               <h2>
                 Joji หรือ George Miller เป็น Singer Songwriter Former comedian
                 และ Producer ที่มาจาก Australia เคยสวมบทบาทCharactersบน Internet
@@ -105,8 +117,7 @@
               </h2>
             </div>
             <div
-              class="content-teams-item animate__animated animate__bounceInLeft animate_faster"
-            >
+              class="content-teams-item animate__animated animate__bounceInLeft animate_faster">
               <iframe
                 style="border-radius: 12px"
                 src="https://open.spotify.com/embed/track/0f1G5SHFoFC9lO03gHCGVS?utm_source=generator"
@@ -115,8 +126,7 @@
                 frameborder="0"
                 allowfullscreen=""
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-              ></iframe>
+                loading="lazy"></iframe>
               <h2>
                 My Fave Song of
                 <a
