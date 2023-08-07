@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Handjet:wght@200&family=Noto+Sans+Thai:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -141,6 +142,10 @@ header {
   background: #000;
   border-top: 5px solid #970102;
   transition: background 0.4s ease-in;
+  -webkit-transition: background 0.4s ease-in;
+  -moz-transition: background 0.4s ease-in;
+  -ms-transition: background 0.4s ease-in;
+  -o-transition: background 0.4s ease-in;
 }
 .active {
   background-color: #970102;
@@ -158,17 +163,36 @@ header {
 .logo a {
   color: #fff;
   text-decoration: none;
-  transition: 0.3s ease;
   text-shadow: 2px 2px 7px rgb(134, 134, 134);
 }
 .logo a:hover {
   color: #970102;
-  transition: 0.3s ease;
+
   text-shadow: 2px 2px 5px rgb(129, 0, 0);
+}
+.dark-mode .logo h1 {
+  transition: 0.3s ease;
+  color: #c40000;
+
+  text-shadow: 2px 2px 7px rgb(136, 35, 35);
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+.dark-mode .logo h1:hover {
+  transition: 0.3s ease;
+  color: red;
+  text-shadow: 2px 2px 7px rgb(189, 40, 40);
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
 }
 .logo h1 {
   font-size: 35px;
   text-transform: uppercase;
+  transition: 0.35s ease;
 }
 .logo span {
   font-size: 15px;
@@ -185,12 +209,14 @@ header {
   margin-bottom: 1.3rem;
 }
 .menu li a {
+  font-family: "Handjet", cursive;
   font-weight: bold;
   text-decoration: none;
   color: #fff;
   padding: 5px 9px;
   text-transform: uppercase;
   transition: 0.3s ease;
+  font-size: 22px;
 }
 .menu li a:hover {
   color: #000;
@@ -419,7 +445,8 @@ header {
   -o-transition: 0.3s ease;
 }
 .content-teams-item h2 {
-  font-size: 20px;
+  font-family: "Noto Sans Thai", sans-serif;
+  font-size: 22px;
   border-bottom: 2px solid #e4e4e4;
   padding: 20px 0;
   color: #333;
