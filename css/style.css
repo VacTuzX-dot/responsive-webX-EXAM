@@ -184,10 +184,6 @@ header {
   transition: 0.3s ease;
   color: red;
   text-shadow: 2px 2px 7px rgb(189, 40, 40);
-  -webkit-transition: 0.3s ease;
-  -moz-transition: 0.3s ease;
-  -ms-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
 }
 .logo h1 {
   font-size: 35px;
