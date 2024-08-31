@@ -424,9 +424,12 @@ header {
   box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.8);
 }
 .content-teams-item:nth-child(2) img:hover {
-  max-width: 430px;
-  max-height: 430px;
-  border-radius: 20px;
+  scale: 1.05;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
 }
 .content-teams-item:nth-child(1) img {
   max-width: 650px;

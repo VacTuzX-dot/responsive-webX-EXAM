@@ -64,14 +64,50 @@ class logo extends HTMLElement {
   }
 }
 customElements.define("logo-component", logo);
-
+//footer
+class footerwrap extends HTMLElement {
+  constructor() {
+    super();
+  }
+  connectedCallback() {
+    this.innerHTML = `<div class="footer-grid">
+          <!--  -->
+          <div class="footer-item">
+            <h3>Taweesak Numma</h3>
+            <span class="date">Tuesday, 27th June 2023</span>
+            <p>
+              &copy; สงวนลิขสิทธิ์ตามสิทธ์มนุษยชน นายทวีศักดิ์ นำมา หรือ
+              Products , Projects ที่เกี่ยวข้อง ถือเป็นกรรมสิทธิ์ของ
+              นายทวีศักดิ์ นำมา.
+            </p>
+            <div class="social-wrap">
+              <a href="https://www.facebook.com/vactuz/" target="_blank"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/v4lk.yrieq_1sf3sb.o8lixw/"
+                target="_blank"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="https://discord.com/users/942687569693528084"
+                target="_blank"
+                ><i class="fa-brands fa-discord"></i
+              ></a>
+            </div>
+          </div>
+          <!--  -->
+        </div>`;
+  }
+}
+customElements.define("footer-comp", footerwrap);
 // toggle component
 class togglewrap extends HTMLElement {
   constructor() {
     super();
   }
   connectedCallback() {
-    this.innerHTML = `
+    this.innerHTML = ` 
     <style>
       .toggle-wrapper {
       position: absolute;
